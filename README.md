@@ -15,7 +15,7 @@ Require or import as `epubCheck`, then call `epubCheck('path/to/expanded/epub/di
 `epubCheck` then returns a Promise which resolves with an object that includes pass/fail data, and an array of error and warning messages*, if any.
 
 ```
-{ pass: true, messages: [] };
+{ pass: true, messages: [] }
 ```
 
 or
@@ -23,12 +23,12 @@ or
 ```
 { pass: false,
   messages: [{
-    'type': type,
-    'file': file,
-    'line': line_num,
-    'col': col,
-    'msg': msg
-    },
+    'type': '',  // epubcheck message type, e.g. 'ERROR(RSC-012)'
+    'file': '',  // file path and name, relative to the given directory
+    'line': '',  // line number
+    'col': '',   // column number
+    'msg': ''    // error or warning message, e.g. 'Fragment identifier is not defined.'
+    }
   ]
 }
 ```
