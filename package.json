@@ -1,7 +1,7 @@
 {
   "name": "epub-check",
   "version": "0.1.0",
-  "description": "Asycronously validate an expanded EPUB in Node ^7.9",
+  "description": "Asychronously validate an expanded EPUB.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

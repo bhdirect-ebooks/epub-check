@@ -1,6 +1,6 @@
 # epub-check
 
-Asycronously validate an expanded EPUB with Node ^7.6 (uses `async` and `await`), using the most recent release of (epubcheck)[https://github.com/IDPF/epubcheck], currently v4.0.2.
+Asychronously validate an expanded EPUB with Node ^7.6, using the most recent release of (epubcheck)[https://github.com/IDPF/epubcheck], currently v4.0.2.
 
 ## Install
 
@@ -12,7 +12,7 @@ yarn add epub-check
 
 Require or import as `epubCheck`, then call `epubCheck('path/to/expanded/epub/directory')`.
 
-`epubCheck` then returns a promise which resolves with an object that includes pass/fail data, and an array of error and warning messages*, if any.
+`epubCheck` then returns a Promise which resolves with an object that includes pass/fail data, and an array of error and warning messages*, if any.
 
 ```
 { pass: true, messages: [] };
