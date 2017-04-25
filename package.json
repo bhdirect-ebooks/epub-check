@@ -8,7 +8,8 @@
   },
   "repository": {
     "type": "git",
-    "git": "https://github.com/westonlit/epub-check",
+    "git": "https://github.com/westonlit/epub-check"
+  },
   "author": "Weston Littrell",
   "license": "MIT",
   "bugs": {
