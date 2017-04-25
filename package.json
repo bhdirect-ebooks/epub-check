@@ -1,0 +1,23 @@
+{
+  "name": "epub-check",
+  "version": "0.1.0",
+  "description": "Asycronously validate an expanded EPUB in Node ^7.9",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "git": "https://github.com/westonlit/epub-check",
+  "author": "Weston Littrell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bhdirect-ebooks/epub-check/issues"
+  },
+  "homepage": "https://github.com/bhdirect-ebooks/epub-check#readme",
+  "dependencies": {
+    "async-child-process": "^1.1.1",
+    "lodash": "^4.17.4",
+    "shell-escape": "^0.2.0"
+  }
+}
