@@ -1,6 +1,6 @@
 {
   "name": "epub-check",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Asychronously validate an expanded EPUB.",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "homepage": "https://github.com/bhdirect-ebooks/epub-check#readme",
   "dependencies": {
     "async-child-process": "^1.1.1",
-    "lodash": "^4.17.4",
+    "lodash.remove": "^4.7.0",
     "shell-escape": "^0.2.0"
   }
 }

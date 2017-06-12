@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 'use strict';
 
-const _ = require('lodash');
 const path = require('path');
+const remove = require('lodash.remove');
 const execAsync = require('async-child-process').execAsync;
 const shellEscape = require('shell-escape');
 const epubcheck_path = path.resolve(__dirname, 'lib/epubcheck');
+
 
 async function epubCheck(dir_path) {
   const args = ['java', '-jar', `${epubcheck_path}/epubcheck.jar`, dir_path, '--quiet', '--mode', 'exp', '-c', `${epubcheck_path}/custom-msg.txt`];
@@ -14,12 +15,13 @@ async function epubCheck(dir_path) {
   return result;
 
   async function processExecData(command) {
-    let output = await execAsync(command);
+    let output = await execAsync(command)
+      .then(res => {return res;}).catch(err => {return err;});
     output = output.toString();
     let lines = output.split("\n");
 
     if (lines.length > 1) {
-      lines = _.chain(lines.map(line => {
+      lines = lines.map(line => {
         // Replace path in logs to make it cleaner
         line = line.replace(new RegExp(`${dir_path}.epub/`, 'g'), '');
 
@@ -48,9 +50,11 @@ async function epubCheck(dir_path) {
           'col': col,
           'msg': msg
         };
-      }))
-      .compact()
-      .value();
+      });
+
+      remove(lines, l => {
+        return !l.file;
+      });
 
       return {
         pass: false,
