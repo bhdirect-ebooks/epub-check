@@ -1,6 +1,6 @@
 {
-  "name": "epub-check",
-  "version": "0.3.0",
+  "name": "@bhdirect/epub-check",
+  "version": "0.4.0",
   "description": "Asychronously validate an expanded EPUB.",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,10 @@
     "type": "git",
     "git": "https://github.com/westonlit/epub-check"
   },
-  "author": "Weston Littrell",
+  "contributors": [
+    "Weston Littrell",
+    "Peter Turner <peter.turner@lifeway.com> (https://github.com/flintsteel7)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bhdirect-ebooks/epub-check/issues"
