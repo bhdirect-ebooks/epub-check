@@ -1,6 +1,6 @@
 # epub-check
 
-Asychronously validate an expanded EPUB with Node ^7.6, using the most recent release of [epubcheck](https://github.com/IDPF/epubcheck), currently v4.0.2.
+Asychronously validate an expanded EPUB with Node ^7.6, using the most recent release of [epubcheck](https://github.com/IDPF/epubcheck), currently v4.2.2.
 
 ## Install
 
